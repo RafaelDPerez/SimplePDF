@@ -220,7 +220,7 @@ open class SimplePDF {
             renderingXoffset =  right - aspectWidth
         }
         
-        let renderingRect = CGRect(x: renderingXoffset, y: currentYoffset, width: aspectWidth, height: aspectHeight)
+        let renderingRect = CGRect(x: renderingXoffset, y: ( pageBounds.height - aspectHeight ) / 2.0, width: aspectWidth, height: aspectHeight)
         
         // render image to current pdf context
         image.draw(in: renderingRect)
